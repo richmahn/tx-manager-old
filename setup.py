@@ -22,10 +22,10 @@ setup(
     long_description=read('README.md'),
     classifiers=[],
     dependency_links=[
-        'git+git://github.com/richmahn/tx-shared-tools.git#egg=tx-shard-tools',
+        'git+git://github.com/richmahn/tx_shared_tools.git#egg=tx-shard-tools',
     ],
     install_requires=[
         'requests',
-        'tx-shared-tools'
+        'tx_shared_tools'
     ]
 )

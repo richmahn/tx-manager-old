@@ -1,2 +1,2 @@
 requests
-git+git://github.com/richmahn/tx-shared-tools.git#egg=tx-shared-tools
+git+git://github.com/richmahn/tx_shared_tools.git#egg=tx_shared_tools
