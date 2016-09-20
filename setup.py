@@ -26,6 +26,6 @@ setup(
     ],
     install_requires=[
         'requests',
-        'tx_shared_tools'
+        'tx_shared_tools>=0.0.1'
     ]
 )
