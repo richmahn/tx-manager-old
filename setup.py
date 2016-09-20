@@ -11,7 +11,7 @@ def read(f_name):
 
 setup(
     name="tx-manager",
-    version="0.0.2",
+    version="0.0.3",
     author="unfoldingWord",
     author_email="unfoldingword.org",
     description="Classes for executing tX Manager",
