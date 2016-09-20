@@ -11,7 +11,7 @@ def read(f_name):
 
 setup(
     name="tx-manager",
-    version="0.0.4",
+    version="0.0.5",
     author="unfoldingWord",
     author_email="unfoldingword.org",
     description="Classes for executing tX Manager",
@@ -26,7 +26,6 @@ setup(
     ],
     install_requires=[
         'requests',
-        'aws_tools',
-        'gogs_tools'
+        'tx-shared-tools',
     ],
 )
