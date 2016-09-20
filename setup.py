@@ -24,6 +24,6 @@ setup(
     install_requires=[
         'tx-shared-tools'
     ],
-    dependency_links=['git+git://github.com/richmahn/tx-shared-tools.git@develop#egg=tx-shared-tools'],
+    dependency_links=['https://github.com/richmahn/tx-shared-tools/tarball/develop#egg=tx-shared-tools'],
     requires=['pygithub', ]
 )
