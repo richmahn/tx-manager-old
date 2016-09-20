@@ -22,7 +22,8 @@ setup(
     long_description=read('README.md'),
     classifiers=[],
     install_requires=[
-        'git+git://github.com/richmahn/tx-shared-tools.git@develop#egg=tx-shared-tools'
+        'tx-shared-tools'
     ],
+    dependency_links=['git+git://github.com/richmahn/tx-shared-tools.git@develop#egg=tx-shared-tools'],
     requires=['pygithub', ]
 )
