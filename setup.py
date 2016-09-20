@@ -11,7 +11,7 @@ def read(f_name):
 
 setup(
     name="tx-manager",
-    version="0.0.5",
+    version="0.0.6",
     author="unfoldingWord",
     author_email="unfoldingword.org",
     description="Classes for executing tX Manager",
@@ -22,7 +22,7 @@ setup(
     long_description=read('README.md'),
     classifiers=[],
     dependency_links=[
-        'git+git://github.com/richmahn/tx-shared-tools.git@develop#egg=tx-shared-tools',
+        'git+git://github.com/richmahn/tx-shared-tools.git#egg=tx-shared-tools',
     ],
     install_requires=[
         'requests',
