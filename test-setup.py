@@ -12,9 +12,9 @@ setup(
     long_description='Unit test setup file',
     classifiers=[],
     dependency_links=[
-        'git+git://github.com/richmahn/tx-shared-tools.git@develop#egg=aws_tools',
-        'git+git://github.com/richmahn/tx-shared-tools.git@develop#egg=general_tools',
-        'git+git://github.com/richmahn/tx-shared-tools.git@develop#egg=gogs_tools',
+        'git+git://github.com/richmahn/tx_shared_tools.git@develop#egg=aws_tools',
+        'git+git://github.com/richmahn/tx_shared_tools.git@develop#egg=general_tools',
+        'git+git://github.com/richmahn/tx_shared_tools.git@develop#egg=gogs_tools',
     ],
     install_requires=[
         'requests',
