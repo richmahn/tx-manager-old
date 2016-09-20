@@ -1,4 +1,0 @@
-requests
-aws_tools
-gogs_tools
-general_tools
