@@ -1,3 +1,2 @@
 requests
-aws_tools
-gogs_tools
+git+git://github.com/richmahn/tx-shared-tools.git#egg=tx-shared-tools
