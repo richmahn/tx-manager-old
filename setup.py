@@ -21,9 +21,12 @@ setup(
     packages=['tx_manager'],
     long_description=read('README.md'),
     classifiers=[],
+    dependency_links=[
+                'git+git://github.com/richmahn/tx-shared-tools.git#egg=tx-shared-tools',
+    ],
     install_requires=[
+        'requests',
         'tx-shared-tools'
     ],
-    dependency_links=['https://github.com/richmahn/tx-shared-tools/tarball/develop#egg=tx-shared-tools'],
     requires=['pygithub', ]
 )

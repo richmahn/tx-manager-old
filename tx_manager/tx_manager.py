@@ -1,5 +1,7 @@
 # txManager functions
 
+from __future__ import print_function
+
 import hashlib
 from datetime import datetime
 from datetime import timedelta
@@ -9,15 +11,15 @@ import requests
 from aws_tools.lambda_handler import LambdaHandler
 from aws_tools.dynamodb_handler import DynamoDBHandler
 from gogs_tools.gogs_handler import GogsHandler
-from tx_manager.tx_job import TxJob
-from tx_manager.tx_module import TxModule
+from tx_job import TxJob
+from tx_module import TxModule
 
 
 class TxManager(object):
     JOB_TABLE_NAME = 'tx-job'
     MODULE_TABLE_NAME = 'tx-module'
 
-    def __init__(self, api_url=None, gogs_url=None, cdn_url=None, cdn_bucket=None, quiet=False, aws_access_key_id=None, aws_secret_access_key=None, job_table_name=JOB_TABLE_NAME, module_table_name=MODULE_TABLE_NAME):
+    def __init__(self, api_url=None, gogs_url=None, cdn_url=None, cdn_bucket=None, quiet=False, aws_access_key_id=None, aws_secret_access_key=None, job_table_name=None, module_table_name=None):
         self.api_url = api_url
         self.cdn_url = cdn_url
         self.cdn_bucket = cdn_bucket
@@ -26,12 +28,18 @@ class TxManager(object):
         self.job_db_handler = None
         self.module_db_handler = None
         self.gogs_handler = None
-        if job_table_name:
-            self.job_db_handler = DynamoDBHandler(job_table_name)
-        if module_table_name:
-            self.module_db_handler = DynamoDBHandler(module_table_name)
+
+        if not job_table_name:
+            job_table_name = self.JOB_TABLE_NAME
+        if not module_table_name:
+            module_table_name = self.MODULE_TABLE_NAME
+
+        self.job_db_handler = DynamoDBHandler(job_table_name)
+        self.module_db_handler = DynamoDBHandler(module_table_name)
+
         if gogs_url:
             self.gogs_handler = GogsHandler(gogs_url)
+
         self.lambda_handler = LambdaHandler(aws_access_key_id, aws_secret_access_key)
 
     def debug_print(self, message):
@@ -133,7 +141,7 @@ class TxManager(object):
             del data['user_token']
         return self.query_jobs(data)
 
-    def get_endpoints(self):
+    def list_endpoints(self):
         return {
             "version": "1",
             "links": [

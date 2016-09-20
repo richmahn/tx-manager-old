@@ -11,10 +11,12 @@ setup(
     packages=['tx_manager'],
     long_description='Unit test setup file',
     classifiers=[],
+    dependency_links=[
+                'git+git://github.com/richmahn/tx-shared-tools.git#egg=tx-shared-tools',
+    ],
     install_requires=[
-        'requires',
-        'boto3',
-        'gogs_client'
+        'requests',
+        'tx-shared-tools'
     ],
     test_suite='tests'
 )

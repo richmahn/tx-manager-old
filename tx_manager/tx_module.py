@@ -1,5 +1,7 @@
 # TxModule class
 
+from __future__ import print_function
+
 from six import string_types
 from six import iteritems
 
