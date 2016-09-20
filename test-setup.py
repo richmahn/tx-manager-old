@@ -12,11 +12,11 @@ setup(
     long_description='Unit test setup file',
     classifiers=[],
     dependency_links=[
-        'git+git://github.com/richmahn/tx_shared_tools.git@develop#egg=tx_shared_tools',
+        'git+git://github.com/richmahn/tx-shared-tools.git@develop#egg=tx-shared-tools',
     ],
     install_requires=[
         'requests',
-        'tx_shared_tools'
+        'tx-shared-tools'
     ],
     test_suite='tests'
 )
