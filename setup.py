@@ -22,7 +22,7 @@ setup(
     long_description=read('README.md'),
     classifiers=[],
     dependency_links=[
-                'git+git://github.com/richmahn/tx-shared-tools.git#egg=tx-shared-tools',
+                'git+git://github.com/richmahn/tx-shared-tools.git@develop#egg=tx-shared-tools',
     ],
     install_requires=[
         'requests',
